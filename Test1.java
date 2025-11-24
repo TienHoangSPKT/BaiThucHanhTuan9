@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Test1 {
     public static void main(String[] args) {
-        QuanLySach qls = new QuanLySach();
+        QuanLySachImpl qls = new QuanLySachImpl();
         Scanner sc = new Scanner(System.in);
         int luaChon = -1;
         do {

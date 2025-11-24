@@ -7,6 +7,8 @@ public abstract class Sach1 implements IkiemKe,IgiaBan{
     private int NamXuatBan;
     protected int Soluong;
     protected int giaCoBan;
+    protected String viTri;
+    protected Scanner sc = new Scanner(System.in);
     public Sach1()
     {
         Masach="";
@@ -15,7 +17,7 @@ public abstract class Sach1 implements IkiemKe,IgiaBan{
         NamXuatBan=0;
         Soluong=0;
     }
-    public Sach1(String Masach, String TieuDe, String Tacgia, int NamXuatBan, int Soluong, int giaCoBan)
+    public Sach1(String Masach, String TieuDe, String Tacgia, int NamXuatBan, int Soluong, int giaCoBan,String viTri)
     {
         this.Masach= Masach ;
         this.TieuDe= TieuDe;
@@ -23,9 +25,10 @@ public abstract class Sach1 implements IkiemKe,IgiaBan{
         this.NamXuatBan= NamXuatBan;
         this.Soluong= Soluong;
         this.giaCoBan= giaCoBan;
-    }public void nhapThongTin() 
+        this.viTri=viTri;
+    }
+    public void nhapThongTin() 
     {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Nhap ma sach: ");
         Masach = sc.nextLine();
         System.out.print("Nhap tieu de: ");
@@ -38,10 +41,13 @@ public abstract class Sach1 implements IkiemKe,IgiaBan{
         Soluong = sc.nextInt();
         System.out.print("Gia co ban :");
         giaCoBan = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Nhap vi tri: ");
+        this.viTri =sc.nextLine();
     }
     @Override
     public String toString() {
-        return "Ma sach: " + Masach + ", Tieu de: " + TieuDe + ", Tac gia: " + Tacgia + ", Nam XB: " + NamXuatBan + ", So luong: " + Soluong + ", Gia co ban"+ giaCoBan;
+        return "Ma sach: " + Masach + ", Tieu de: " + TieuDe + ", Tac gia: " + Tacgia + ", Nam XB: " + NamXuatBan + ", So luong: " + Soluong + ", Gia co ban"+ giaCoBan+ ", Vi tri";
     }
     public String getMasach() {
         return Masach;

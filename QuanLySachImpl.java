@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class QuanLySach implements IQuanLySach {
+public class QuanLySachImpl implements IQuanLySach {
     private ArrayList<Sach1> danhSachSach;
-    public QuanLySach() {
+    public QuanLySachImpl() {
         danhSachSach = new ArrayList<>();
     }
     @Override
@@ -14,7 +14,7 @@ public class QuanLySach implements IQuanLySach {
         System.out.println("2. Sach Tieu Thuyet");
         System.out.print("Lua chon cua ban: ");
         int choice = sc.nextInt();
-        
+        sc.close();
         Sach1 sachMoi;
         if (choice == 1) {
             sachMoi = new SachGiaoTrinh();
